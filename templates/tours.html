@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tours page</title>
+    <link rel="stylesheet" href="../static/Css/tours.css" />
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <div class="content">
+      <div class="msg">{{ resultMSG }}</div>
+    </div>
+    
+    <div id="cityTable">
+        {% for i,e in data %}
+      <div class="city"  onclick="switchtoCity({{i}})">
+        <img class="image" src="{{e.images[1]}}" />
+        <h1>{{e.name}}</h1>
+        <h2>{{e.country}}</h2>
+        <p>{{e.attractions}}</p>
+        <button onclick="switchtoCity({{i}})" class="readMore">
+          Read More
+        </button>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <script src="../static/Js/tours.js"></script>
+  </body>
+</html>

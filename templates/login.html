@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/Css/login.css" />
+        
+        <title>Login page</title>
+    </head>
+    <body>
+    {% include "nav.html" %}
+    
+    <form method="post" action="/login" >
+    <div class="Loginsec">
+
+        <!-- <img alt="" src="../static/Css/login.css" /> -->
+        <span></span>
+        <div  class="loginBigDiv">
+            <h1 id="login">welcome, back !  </h1>
+            <!-- {% block logoutMessage %}<h1>{{message}}</h1>{% endblock %} -->
+            <div class="logindiv">
+                <input id="email" name="user" placeholder='UserName'/>
+            </div>
+            <div  class="logindiv">
+                 <input id="passwrd" type="password" name="passwrd" placeholder='password'/>
+            </div>
+            <div class="loginOrSignup">
+                 <input id="inputbuttn"  type='submit' value="Login"/>
+            </div>
+            <div class="error">
+                <p id="errorPass"> {{resultMSG}}</p>
+    
+           </div>
+         <div class="signup">
+                <a class="createAcc" >don't have an account? </a>
+                <a class="createAcc" href="/signup" id="signup" style="  text-decoration: underline;
+                text-underline-offset:5px; ">sign up</a>
+         </div>
+    </div>
+     
+    <img id="login-img" src="../static/images/login.jpg" />
+   </div>
+<!-- </form> -->
+       <script src="../static/Js/login.js"></script>
+</body>
+</html>

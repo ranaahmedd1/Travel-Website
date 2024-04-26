@@ -1,0 +1,57 @@
+:root {
+  --input-border: #8b8a8b;
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form {
+  width: 100% ;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid white;
+  padding: 10px;
+  
+}
+.input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #c7bdbd;
+  border: 2px solid ;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  font-size: 0.9em;
+  padding-top: 0.35rem;
+}
+/* #tableRows{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px;
+} */
+
+.option-sec {
+  width: 25%;
+  min-height: 90vh;
+  /* background-color: #361818; */
+
+}

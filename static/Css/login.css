@@ -1,0 +1,118 @@
+* {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial;
+}
+.Loginsec {
+/* background-color: red; */
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  /* gap: 40px; */
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+
+  /* box-shadow: #3a424b; */
+}
+#login{
+     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+  ;
+}
+
+.Loginsec img {
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+}
+.Loginsec .loginBigDiv {
+  width: 30%;
+  height: 70%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1c1e21;
+  direction: ltr;
+  line-height: 1.34;
+  font-size: 12px;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  /* margin-right: 80px ; */
+  /* padding: 20px 0 28px; */
+  text-align: center;
+  padding-bottom: 24px;
+  padding-top: 10px;
+}
+.Loginsec .loginBigDiv .logindiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+  align-items: center;
+}
+
+input {
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  padding: 10px;
+  width: 150%;
+
+}
+
+.Loginsec .loginBigDiv #inputbuttn {
+  margin-left: 36px !important; 
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 80%;
+  touch-action: manipulation;
+}
+
+.Loginsec .loginBigDiv #inputbuttn:hover,
+.Loginsec .loginBigDiv #inputbuttn:focus {
+  background-color:#3a424b;
+  scale: 1.1;
+}
+.loginBigDiv .loginOrSignup{
+  width: 50%;
+  display: flex;
+
+  
+}
+
+.loginBigDiv .signup .createAcc #signup{
+  color: rgb(62, 62, 228);
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 832px) {
+  #login-img{
+    display: none;
+  }
+
+}

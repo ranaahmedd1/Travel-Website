@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../static/Css/signup.css" />
+        
+    </head>
+    <body>
+    {% include "nav.html" %}
+    
+<div class="signupsec" >
+
+        <span></span>
+    <form method="post" action="/signup" class="signupsection" >
+        <div class="welcome">
+            <h1 class="welcome-sec" id="welcome">Welcome abroad !</h1>
+            <h2  class="welcome-sec" >Let's get started on ypur exciting journey</h2>
+        </div>
+        <!-- <div class="namesec">
+            <input name="fname" type="text" placeholder="Firstname"  />
+            <input name="lname" type="text" placeholder="Lastname" />
+        </div> -->
+        <div class="infosec">
+            <input name="email" type="text" placeholder="Email" />
+            <input name="Username" type="text" placeholder=" User name"/>
+        </div>
+        <div class="passwrdsec">
+            <input id="pass" name="passwrdinput" type="password" placeholder="Password" />
+            <input id="confPass" name="ConfirmPasswrd" type="password" placeholder="Confirm Password"/>
+        </div>
+        <div class="error">
+            <!-- <p id="errorPass">{{err}}</p> -->
+            <p id="errorPass"> {{resultMSG}}</p>
+
+                <!-- <span></span> -->
+        </div>
+        <input id="signup-btn" class="button" name="ConfirmPasswrd" type="submit" value="SignUp"/>
+        <div class="signup">
+            <a class="createAcc" >Already have an account? </a>
+            <a class="createAcc" href="/login" id="signup" style="  text-decoration: underline;
+            text-underline-offset:5px;"> login</a>
+     </div>
+     
+        </form>
+        <img id="signup-img" src="../static/images/sign up.jpg" a lt=""/>
+        </div>
+
+
+        <script src="../static/Js/signup.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+* {
+    /* margin-top: 55px;
+    left: 0; */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  #welcome{
+    text-align: center;
+  }
+
+
+input:hover{
+  transform: translateY(-5px);
+  transition: .5s;
+}
+
+.welcome-sec{
+
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+}
+
+
+.signupsec{
+  padding-top: 15px;
+
+  /* margin-top: 55px; */
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: nowrap; */
+}
+
+.signupsec img{
+  width: 35%;
+  height: 90vh;
+  object-fit: cover;
+  
+}
+.signupsec .signupsection {
+  width: 45%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  color: #1c1e21;
+  direction: ltr;
+  line-height: 1.34;
+  font-size: 12px;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  /* margin-right: 80px ; */
+  padding: 20px 0 28px;
+  text-align: center;
+  padding-bottom: 24px;
+  padding-top: 24px;
+
+}
+
+.signupsec .signupsection .namesec,
+.signupsec .signupsection .infosec,
+.signupsec .signupsection .passwrdsec{
+
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+form input 
+{
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  padding: 10px ;
+}
+.button{
+  /* background-color: #555e68; */
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%; 
+  /* width: auto !important; */
+}
+
+
+
+.button:hover,
+.button:focus {
+  background-color: #3a424b;
+} 
+#errorPass{
+  color: red;
+  /* display:  none; */
+}
+
+@media screen and (max-width: 832px) {
+  #signup-img{
+    display: none;
+  }
+
+}

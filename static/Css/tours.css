@@ -1,0 +1,58 @@
+.newParagraph{
+    text-align: center;
+}
+body{
+    /* background-color: rgb(235, 228, 228); */
+}
+
+.img:hover {
+    opacity: 0.5;
+  }
+
+#cityTable{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-height: 100vh; 
+  }
+
+#cityTable .city
+{
+cursor: pointer;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1c1e21;
+  direction: ltr;
+  line-height: 1.34;
+  font-size: 12px;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 24px;
+  padding-top: 10px;
+  animation: citymove .25s ;
+
+ 
+}
+
+
+@keyframes citymove {
+  0%   {height: 0px;color: white; width: 0px;}
+  
+  100% {height: 350px;color: #1c1e21;  ;width: 350px;}
+}
+#cityTable .city .image{
+  width: 100px;
+  height: 100px;
+}

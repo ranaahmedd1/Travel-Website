@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% for i,e in data if i==cityidx %}
+    <title>{{e.name}}</title>
+
+    <link rel="stylesheet" href="../static/Css/showcity.css" />
+  </head>
+  <body>
+    {% include "nav.html" %}
+
+    <div class="container">
+      <div class="images">
+        {% for img in e.images%}
+        <button class="BtnImg">
+          <img alt="img" class="oneimg" onclick="btn0()" src="{{e.images[0]}}" />
+        </button>
+        {% endfor %}
+        <!-- <button class="BtnImg">
+          <img alt="img" class="oneimg" onclick="btn0()" src="{{e.images[0]}}" />
+        </button>
+        <button class="BtnImg">
+          <img alt="img" class="oneimg"  onclick="btn1()" src="{{e.images[1]}}" />
+        </button>
+        <button class="BtnImg">
+          <img alt="img" class="oneimg" onclick="btn2()" src="{{e.images[2]}}" />
+        </button>
+        <button class="BtnImg">
+          <img alt="img" class="oneimg" onclick="btn3()" src="{{e.images[3]}}" />
+        </button> -->
+      </div>
+      <div class="firstImg">
+        <img alt="img" class="firstImg" src="{{e.images[0]}}" />
+      </div>
+
+      <div class="text">
+        <h1>{{e.name}}</h1>
+        <h2>{{e.country}}</h2>
+        <p>{{e.attractions}}</p>
+        <div class="addtoFav">
+          <button id="addtoDestinationButton">
+            <img
+              id="addtoDestination"
+              alt="add to destination"
+              src="../static/images/alreadyadded.png"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function btn0() {
+        document.getElementsByClassName(
+          "firstImg"
+        )[0].innerHTML = `<img alt="img" class="firstImg" src="{{e.images[0]}}">`;
+      }
+
+      function btn1() {
+        document.getElementsByClassName(
+          "firstImg"
+        )[0].innerHTML = `<img alt="img" class="firstImg" src="{{e.images[1]}}">`;
+      }
+
+      function btn2() {
+        document.getElementsByClassName(
+          "firstImg"
+        )[0].innerHTML = `<img alt="img" class="firstImg" src="{{e.images[2]}}">`;
+      }
+      function btn3() {
+        document.getElementsByClassName(
+          "firstImg"
+        )[0].innerHTML = `<img alt="img" class="firstImg" src="{{e.images[3]}}">`;
+      }
+    </script>
+
+    <script src="../static/Js/showcity.js"></script>
+  </body>
+  {% endfor %}
+</html>

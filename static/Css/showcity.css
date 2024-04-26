@@ -1,0 +1,53 @@
+*{
+transition: .5s;
+}
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.oneimg {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+.BtnImg{
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer; 
+}
+.oneimg:hover {
+  scale: 1.5;
+}
+.firstImg {
+  width: 350px;
+  height: 350px;
+}
+.textcontainer {
+  width: 270px;
+  height: 270px;
+  /* background-color: red; */
+}
+#addtoDestinationButton{
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer; 
+  
+}
+#addtoDestination{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}

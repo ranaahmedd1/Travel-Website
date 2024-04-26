@@ -1,0 +1,27 @@
+* {
+  /* top: 55px; */
+  left: 0;
+  color:white
+}
+
+.container {
+
+  width: 100%;
+  height: 90vh;
+  background-image: url("../images/homaImg.jpg");
+  background-repeat:no-repeat ;
+  background-size: 100% 100%;
+  /* background-color: #a52a2a; */
+  /* position: relative; */
+
+}
+/* 
+.layer {
+  width: 100%;
+  height: 100%;
+  background-color: #50727b6e;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  */

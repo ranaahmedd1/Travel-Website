@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Cities</title>
+    <link rel="stylesheet" href="../static/Css/updatecities.css">
+
+</head>
+<body>
+    {% include "nav.html" %}
+    <h1 style="text-align: center; ">Admin Page</h1>
+    <h1>
+        {{msg}}
+    </h1>
+<div class="container">
+    <!-- <div " class="option-sec">
+        <hr>
+
+    </div> -->
+    
+    <form id="form" action="/updatecities" method="POST" enctype="multipart/form-data">
+        <input id="cityname" type="text" name="name" placeholder="City Name"></input>
+        <input id="country" type="text" name="country"  placeholder="Country"></input>
+        <input id="arrtactions" type="text" name="attractions"  placeholder="Attractions"></input>
+
+       <input type="file" id="imgs" name="imgs[]" placeholder="add images" multiple/></input>
+       <button id="submit" type="submit" value="Upload">submit</button>
+
+
+    </form>
+</div>
+    <!-- <thead>
+        <tr id="tableRows">
+            <th>name</th>
+            <th>country</th>
+            <th> attractions</th>
+            <th>images</th>
+            <th>Update</th>            
+            <th>Delete</th>            
+        </tr>
+        <tbody>
+
+        </tbody>
+    </thead> -->
+        
+
+
+        <script src="../static/Js/updatecities.js"></script>
+
+</body>
+</html>

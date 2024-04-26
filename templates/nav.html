@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/Css/nav.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-container">
+
+        <nav>
+
+            <div class="nav-items">
+                <span id="welcomeMessage"></span>
+
+                <a href="/tours" >
+                    <p>Tours</p>
+                </a>
+                <a href="/" >
+                    <p>Destinations</p>
+
+                </a>
+                <a href="/" >
+                    <p>Visited</p>
+                </a>
+            </div>
+
+                    <a href="/" class="logo">
+                        <img src="../static/images/logo.png" />
+                        <!-- <img  href="{{ url_for('static',filename='../static/images/logo.png') }}" alt="this is logo" /> -->
+                    </a>
+           <div class="nav-items">
+
+                <a href="/">Home</a>
+                </a>
+                <a href="/" >
+                    <p>About</p>
+                </a>
+                <a href="/login">  <p>login</p> </a>
+                </div>
+                
+                <a  href="/logout">  <button id="logout">logout</button> </a>
+                    <img class="menuIcon" src="../static/images/thw.png" / >
+            </div>
+            
+        </nav>
+    </div>
+    <script src="../static/Js/nav.js"></script>
+    
+</body>
+</html>
