@@ -1,120 +1,161 @@
-
-{  
-  "allcities":[
-    {
-      "name": "New York",
-      "country": "USA",
-      "population": 8175133,
-      "attractions": ["Central Park", "Statue of Liberty", "Times Square"],
-      "images": [
-        "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "London",
-      "country": "UK",
-      "population": 8982000,
-      "attractions": ["Buckingham Palace", "Big Ben", "British Museum"],
-      "images": [
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "Paris",
-      "country": "France",
-      "population": 2206488,
-      "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"],
-      "images": [
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  
-      ]
-    },{
-      "name": "New York",
-      "country": "USA",
-      "population": 8175133,
-      "attractions": ["Central Park", "Statue of Liberty", "Times Square"],
-      "images": [
-        "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "London",
-      "country": "UK",
-      "population": 8982000,
-      "attractions": ["Buckingham Palace", "Big Ben", "British Museum"],
-      "images": [
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "Paris",
-      "country": "France",
-      "population": 2206488,
-      "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"],
-      "images": [
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  
-      ]
-    },{
-      "name": "New York",
-      "country": "USA",
-      "population": 8175133,
-      "attractions": ["Central Park", "Statue of Liberty", "Times Square"],
-      "images": [
-        "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "London",
-      "country": "UK",
-      "population": 8982000,
-      "attractions": ["Buckingham Palace", "Big Ben", "British Museum"],
-      "images": [
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      ]
-    },
-    {
-      "name": "Paris",
-      "country": "France",
-      "population": 2206488,
-      "attractions": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"],
-      "images": [
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
-        "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  
-      ]
-    }
-  ]
+{
+    "allcities": [
+        {
+            "attractions": [
+                "Central Park",
+                "Statue of Liberty",
+                "Times Square"
+            ],
+            "country": "USA",
+            "images": [
+                "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "New York",
+            "population": 8175133
+        },
+        {
+            "attractions": [
+                "Buckingham Palace",
+                "Big Ben",
+                "British Museum"
+            ],
+            "country": "UK",
+            "images": [
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "London",
+            "population": 8982000
+        },
+        {
+            "attractions": [
+                "Eiffel Tower",
+                "Louvre Museum",
+                "Notre-Dame Cathedral"
+            ],
+            "country": "France",
+            "images": [
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "Paris",
+            "population": 2206488
+        },
+        {
+            "attractions": [
+                "Central Park",
+                "Statue of Liberty",
+                "Times Square"
+            ],
+            "country": "USA",
+            "images": [
+                "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "New York",
+            "population": 8175133
+        },
+        {
+            "attractions": [
+                "Buckingham Palace",
+                "Big Ben",
+                "British Museum"
+            ],
+            "country": "UK",
+            "images": [
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "London",
+            "population": 8982000
+        },
+        {
+            "attractions": [
+                "Eiffel Tower",
+                "Louvre Museum",
+                "Notre-Dame Cathedral"
+            ],
+            "country": "France",
+            "images": [
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "Paris",
+            "population": 2206488
+        },
+        {
+            "attractions": [
+                "Central Park",
+                "Statue of Liberty",
+                "Times Square"
+            ],
+            "country": "USA",
+            "images": [
+                "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "New York",
+            "population": 8175133
+        },
+        {
+            "attractions": [
+                "Buckingham Palace",
+                "Big Ben",
+                "British Museum"
+            ],
+            "country": "UK",
+            "images": [
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/1059078/pexels-photo-1059078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "London",
+            "population": 8982000
+        },
+        {
+            "attractions": [
+                "Eiffel Tower",
+                "Louvre Museum",
+                "Notre-Dame Cathedral"
+            ],
+            "country": "France",
+            "images": [
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+                "https://images.pexels.com/photos/2704910/pexels-photo-2704910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ],
+            "name": "Paris",
+            "population": 2206488
+        },
+        {
+            "attractions": [
+                "cairo tower,pyramida"
+            ],
+            "country": "Egypt",
+            "images": [
+                "/static/images/11.jpg",
+                "/static/images/12.jpg",
+                "/static/images/13.jpg",
+                "/static/images/14.jpg"
+            ],
+            "name": "Cairo"
+        }
+    ]
 }

@@ -11,14 +11,13 @@
     <body>
     {% include "nav.html" %}
     
-    <form method="post" action="/login" >
+    <form method="POST" action="/login" >
     <div class="Loginsec">
 
-        <!-- <img alt="" src="../static/Css/login.css" /> -->
         <span></span>
         <div  class="loginBigDiv">
             <h1 id="login">welcome, back !  </h1>
-            <!-- {% block logoutMessage %}<h1>{{message}}</h1>{% endblock %} -->
+          
             <div class="logindiv">
                 <input id="email" name="user" placeholder='UserName'/>
             </div>
@@ -38,10 +37,10 @@
                 text-underline-offset:5px; ">sign up</a>
          </div>
     </div>
+</form>
      
     <img id="login-img" src="../static/images/login.jpg" />
    </div>
-<!-- </form> -->
        <script src="../static/Js/login.js"></script>
 </body>
 </html>

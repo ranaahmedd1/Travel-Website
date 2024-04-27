@@ -1,9 +1,6 @@
 .newParagraph{
     text-align: center;
 }
-body{
-    /* background-color: rgb(235, 228, 228); */
-}
 
 .img:hover {
     opacity: 0.5;
@@ -45,7 +42,10 @@ cursor: pointer;
 
  
 }
+#cityTable .city:hover
 
+{scale: 1.1;
+}
 
 @keyframes citymove {
   0%   {height: 0px;color: white; width: 0px;}

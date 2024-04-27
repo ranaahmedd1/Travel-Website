@@ -37,7 +37,6 @@ transition: .5s;
 .textcontainer {
   width: 270px;
   height: 270px;
-  /* background-color: red; */
 }
 #addtoDestinationButton{
   border: none;

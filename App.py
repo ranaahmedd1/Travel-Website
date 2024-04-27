@@ -63,8 +63,10 @@ class traveller():
         if alreadyFound:
             session.permanent=True
             session["user"]=self.username
-            resultMSG="Loged In successfully!"
-            return render_template("tours.html",resultMSG=resultMSG)
+            if self.username=='admin@admin.com' and self.paswrd =='123':
+                return redirect(url_for("updatecities"))
+            # session['msg']="logged in successfully!"
+            return redirect(url_for("tours"))
         else:
            resultMSG="incorrect Username or password"
         return render_template("login.html",resultMSG=resultMSG) 
@@ -126,17 +128,30 @@ def showcity(idx):
             data = json.load(json_file)
         return  render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
 
+
+
 @app.route("/updatecities",methods=["POST","GET"])
 def updatecities():
     if request.method=="POST":
+        #####get inputs from admin page
+        with open('file.json') as json_file:
+            data = json.load(json_file)
         uploaded_files = request.files.getlist("imgs[]")
-        # print(uploaded_files)
-        ##############open json file
+        cityname=request.form.get("name")
+        country=request.form.get("country")
+        attractions=request.form.get("attractions")
+        arrofimgs=[]
+        newcity={"name":cityname,"country":country,"attractions":[attractions],"images": []}
         for file in uploaded_files:
               imgDir = "static/images/"+file.filename
               file.save(imgDir)
-              ####################append images and data
-        return render_template("updatecities.html",msg="'Files uploaded successfully'")
+              arrofimgs.append("/"+imgDir)
+        newcity["images"]=arrofimgs
+        data["allcities"].append(newcity)
+        # print(newcity) 
+        with open('file.json', 'w', encoding='utf-8') as file:
+            json.dump(data,file, indent=4)
+        return render_template("updatecities.html",msg="Files uploaded successfully")
 
     else:
         return render_template("updatecities.html")
@@ -148,35 +163,3 @@ def updatecities():
 def logout():
     session.pop("user",None)
     return render_template("login.html")
-
-
-# @app.route("/show")
-# def show():
-#        with open("file.json",'r') as json_file:
-#             data=json.load(json_file)
-#             cities=data['cities']
-#             for city in cities:
-#                 return city
-# class city():
-    # def newCity(name):
-    #     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    #     cursor.execute('SELECT * FROM cities WHERE name = % s', (name ,))
-    #     alreadyFound = cursor.fetchone()
-    #     if alreadyFound :
-    #         resultMSG="City Already exists"   
-    #     else:
-    #         cityname=request.form["name"]
-    #         country=request.form["country"]
-    #         attractions=request.form["attractions"]
-    #         imges= request.files["imgs"]
-    #         ####################################################################################################3
-    #         cursor.execute('INSERT INTO `cities`(`name`, `country`, `attractions`, `imgs`) VALUES( % s, % s, % s) ',(cityname,country,attractions,imges) )
-    #         mysql.connection.commit()
-    #         resultMSG = 'You have successfully registered !'
-
-
-# with open('file.json') as json_file:
-#         data = json.load(json_file)
-#         render_template("tours.html")
-        #,data['allcities']
-    #     return render_template("signup.html",resultMSG=resultMSG)  

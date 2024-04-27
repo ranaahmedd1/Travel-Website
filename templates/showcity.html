@@ -13,23 +13,17 @@
 
     <div class="container">
       <div class="images">
-        {% for img in e.images%}
+      
         <button class="BtnImg">
           <img alt="img" class="oneimg" onclick="btn0()" src="{{e.images[0]}}" />
-        </button>
-        {% endfor %}
-        <!-- <button class="BtnImg">
-          <img alt="img" class="oneimg" onclick="btn0()" src="{{e.images[0]}}" />
-        </button>
-        <button class="BtnImg">
-          <img alt="img" class="oneimg"  onclick="btn1()" src="{{e.images[1]}}" />
-        </button>
-        <button class="BtnImg">
+        </button><button class="BtnImg">
+          <img alt="img" class="oneimg" onclick="btn1()" src="{{e.images[1]}}" />
+        </button><button class="BtnImg">
           <img alt="img" class="oneimg" onclick="btn2()" src="{{e.images[2]}}" />
-        </button>
-        <button class="BtnImg">
+        </button><button class="BtnImg">
           <img alt="img" class="oneimg" onclick="btn3()" src="{{e.images[3]}}" />
-        </button> -->
+        </button>
+      
       </div>
       <div class="firstImg">
         <img alt="img" class="firstImg" src="{{e.images[0]}}" />
@@ -40,7 +34,7 @@
         <h2>{{e.country}}</h2>
         <p>{{e.attractions}}</p>
         <div class="addtoFav">
-          <button id="addtoDestinationButton">
+          <button  id="addtoDestinationButton">
             <img
               id="addtoDestination"
               alt="add to destination"

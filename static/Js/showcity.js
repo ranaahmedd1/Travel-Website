@@ -1,13 +1,17 @@
 const logout = document.getElementById("logout");
 const addtodestBTN = document.getElementById("addtoDestinationButton");
-// const addtodestIMG=document.getElementById("addtoDestination");
-// console.log(addtodestIMG)
+
 function displayLogout() {
   logout.style.display = "block";
 }
 
 displayLogout();
 
+
+function switchICons(){
+  
+
+}
 addtodestBTN.addEventListener("change", () => {
   if(addtodestIMG.src == "../static/images/alreadyadded.png")
   {
