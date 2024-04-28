@@ -24,11 +24,21 @@ app.config['MYSQL_DB'] = 'travel'
 
 mysql = MySQL(app)
 
+# CREATE DATABASE travel;
+# CREATE TABLE traveller (
+#     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+#     username VARCHAR(50),
+#     email VARCHAR(60),
+#     password VARCHAR(50)
+# );
+
+
 class traveller():
 
     def __init__(self,username,paswrd):
         self.username=username
         self.paswrd=paswrd
+
     # def connection(self):
     
     def newTraveller(self,email,confPaswrd):

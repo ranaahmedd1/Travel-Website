@@ -11,12 +11,14 @@ displayLogout();
 const addtodestBTN = document.getElementById("addtoDestinationButton");
 const addtodestIMG = document.getElementById("addtoDestination");
 function switchFav() {
-  if (addtodestIMG.src === "../static/images/alreadyadded.png") {
-    addtodestIMG.src = "../static/images/add.png";
-    addtodestIMG.alt = " added to destination";
+  
+  if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/alreadyadded.png') {
+    addtodestIMG.src = '../static/images/add.png';
+    addtodestIMG.alt = "added to destination";
     // addtodestBTN.style.backgroundImage="../images/add.png"
-  } else if (addtodestIMG.src === "../static/images/add.png") {
-    addtodestIMG.src = "../static/images/alreadyadded.png";
+  } else if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/add.png') {
+    addtodestIMG.src = '../static/images/alreadyadded.png';
     addtodestIMG.alt = " add to destination";
+
   }
 };

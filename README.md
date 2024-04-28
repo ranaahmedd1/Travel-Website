@@ -31,8 +31,9 @@ Welcome to **Travel Explorer website**, your passport to wanderlust! Whether you
 Ready to embark on your virtual journey? Follow these steps:
 
 1. **Clone the Repository**: Start by cloning this repository to your local machine.
-2. **Set Up the Database**: Configure your database (MySQL) so don't forget to start the server!
+2. **Set Up the Database**: Configure your database (MySQL) so don't forget to start the server! and make sure to add Travel table to your mysqldb ,change db configurations only if needed to.
 3. **Run the Application**: Execute `Flask --app App.py --debug run` to launch the server.
 4. **Access the Website**: Open your browser and visit `http://localhost:5000`.
+   
 
 
