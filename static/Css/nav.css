@@ -75,7 +75,7 @@ nav .logo img {
 #logout:hover {
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.74);
   background-color: #302521;
-  scale: 1.1;
+  scale: 1..25;
 }
 .menuIcon {
   display: none;

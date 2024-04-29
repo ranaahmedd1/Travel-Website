@@ -7,7 +7,7 @@ transition: .5s;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 .images {
   display: flex;
@@ -31,11 +31,11 @@ transition: .5s;
   scale: 1.5;
 }
 .firstImg {
-  width: 350px;
-  height: 350px;
+  width: 550px;
+  height: 550px;
 }
 .textcontainer {
-  width: 270px;
+  width: 170px;
   height: 270px;
 }
 #addtoDestinationButton{

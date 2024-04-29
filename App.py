@@ -23,13 +23,24 @@ app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'travel'
 
 mysql = MySQL(app)
+def readJson():
+    with open('file.json') as json_file:
+            data = json.load(json_file)
+    return data        
+
+
+def GetFavouriteCities(arr=[1,2]):
+    data=readJson()
+
+
 
 # CREATE DATABASE travel;
 # CREATE TABLE traveller (
 #     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 #     username VARCHAR(50),
 #     email VARCHAR(60),
-#     password VARCHAR(50)
+#     password VARCHAR(50),
+ #    favouritecities VARCHAR(40)
 # );
 
 
@@ -94,7 +105,6 @@ def homePage():
 
 @app.route("/login",methods=["POST","GET"])
 def login():
-    # db.create_all()
     if request.method =="POST" and  "user" in request.form and "passwrd" in request.form:
         LoginTraveller=traveller(username=request.form["user"] ,paswrd=request.form["passwrd"])
         return LoginTraveller.checkLogIn()
@@ -125,8 +135,7 @@ def signup():
 def tours():
     if "user" in session:
         user=session["user"]
-        with open('file.json') as json_file:
-            data = json.load(json_file)
+        data=readJson()
         return render_template("tours.html",name=user,data=enumerate(data["allcities"]))
     else :
         return render_template("login.html")
@@ -134,8 +143,7 @@ def tours():
 @app.route("/showcity/<idx>")
 def showcity(idx):
         idx=int(idx)
-        with open('file.json') as json_file:
-            data = json.load(json_file)
+        data=readJson()
         return  render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
 
 @app.route("/addtoFav/<idx>")
@@ -151,8 +159,7 @@ def addtoFav(idx):
         mysql.connection.commit()
         idx=int(idx)
         #to redirect the user to the page of the city he saved
-        with open('file.json') as json_file:
-            data = json.load(json_file)
+        data=readJson()
         return render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
     else:
         return render_template("login.html")
@@ -161,22 +168,31 @@ def addtoFav(idx):
 
 @app.route("/destinations")
 def destinations():
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     if "user" in session:
+        user=session["user"]
+        data=readJson()
+        cursor.execute('SELECT `favouritecities` FROM traveller WHERE username = % s ', (user, ))
+        FavFound = cursor.fetchone()['favouritecities'].split(",")   #FavFound string after split it's array of 
+        # print(type(FavFound))
+        # if FavFound != "":
+            # return render_template("destinations.html")
+                                #    ,,data=data['allcities'])
         
-        return render_template("destinations.html")
+        return render_template("noFavFound.html")
     
 @app.route("/updatecities",methods=["POST","GET"])
 def updatecities():
     if request.method=="POST":
         #####get inputs from admin page
-        with open('file.json') as json_file:
-            data = json.load(json_file)
+        data=readJson()
+        newId=len(data["allcities"])+1
         uploaded_files = request.files.getlist("imgs[]")
         cityname=request.form.get("name")
         country=request.form.get("country")
         attractions=request.form.get("attractions")
         arrofimgs=[]
-        newcity={"name":cityname,"country":country,"attractions":[attractions],"images": []}
+        newcity={"id":newId,"name":cityname,"country":country,"attractions":[attractions],"images": []}
         for file in uploaded_files:
               imgDir = "static/images/"+file.filename
               file.save(imgDir)
