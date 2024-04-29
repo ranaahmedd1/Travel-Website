@@ -138,8 +138,33 @@ def showcity(idx):
             data = json.load(json_file)
         return  render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
 
+@app.route("/addtoFav/<idx>")
+def addtoFav(idx):
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    if "user" in session:
+        user=session["user"]
+        cursor.execute('SELECT `favouritecities` FROM traveller WHERE username = % s ', (user, ))
+        cityArr = cursor.fetchone()
+        #append to favourite cities the new added favourite city
+        cityArr['favouritecities']+=','+idx                
+        cursor.execute('UPDATE `traveller` SET `favouritecities` =  % s   WHERE `username` = % s', ( cityArr['favouritecities'],user,))
+        mysql.connection.commit()
+        idx=int(idx)
+        #to redirect the user to the page of the city he saved
+        with open('file.json') as json_file:
+            data = json.load(json_file)
+        return render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
+    else:
+        return render_template("login.html")
 
+        
 
+@app.route("/destinations")
+def destinations():
+    if "user" in session:
+        
+        return render_template("destinations.html")
+    
 @app.route("/updatecities",methods=["POST","GET"])
 def updatecities():
     if request.method=="POST":
@@ -158,7 +183,6 @@ def updatecities():
               arrofimgs.append("/"+imgDir)
         newcity["images"]=arrofimgs
         data["allcities"].append(newcity)
-        # print(newcity) 
         with open('file.json', 'w', encoding='utf-8') as file:
             json.dump(data,file, indent=4)
         return render_template("updatecities.html",msg="Files uploaded successfully")
