@@ -1,6 +1,6 @@
-const logout = document.getElementById("logout");
+const logout=document.getElementById("logout")
+function displayLogout(){
+logout.style.display = "block";
 
-function displayLogout() {
-    logout.style.display = "block";
-  }
-  displayLogout()
+}
+displayLogout()

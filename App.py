@@ -142,10 +142,11 @@ def tours():
 
 @app.route("/showcity/<idx>")
 def showcity(idx):
+    if "user" in session:
         idx=int(idx)
         data=readJson()
         return  render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
-
+    render_template("login.html")
 @app.route("/addtoFav/<idx>")
 def addtoFav(idx):
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -179,8 +180,17 @@ def destinations():
             # return render_template("destinations.html")
                                 #    ,,data=data['allcities'])
         
-        return render_template("noFavFound.html")
-    
+        return render_template("noFavFound.html",msg="destinations")
+    render_template("login.html")
+
+
+@app.route("/visited")
+def visited():
+    if "user" in session:
+         return render_template("noFavFound.html",msg="visited cities")
+    render_template("login.html",)
+  
+
 @app.route("/updatecities",methods=["POST","GET"])
 def updatecities():
     if request.method=="POST":
