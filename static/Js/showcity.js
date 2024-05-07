@@ -10,19 +10,19 @@ displayLogout();
 
 const addtodestBTN = document.getElementById("addtoDestinationButton");
 const addtodestIMG = document.getElementById("addtoDestination");
+fyn
 function switchFav(i) {
   
   if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/alreadyadded.png') {
     addtodestIMG.src = '../static/images/add.png';
     addtodestIMG.alt = "added to destination";
-    // console.log(i)
-    let i=localStorage.getItem("cityindex")
+    let i=localStorage.getItem("cityindex");
     window.location.href = `http://127.0.0.1:5000/addtoFav/${i}`;
-
-    // addtodestBTN.style.backgroundImage="../images/add.png"
-  } else if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/add.png') {
-    addtodestIMG.src = '../static/images/alreadyadded.png';
-    addtodestIMG.alt = " add to destination";
-
   }
+  //  else if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/add.png') {
+  //   addtodestIMG.src = '../static/images/alreadyadded.png';
+  //   addtodestIMG.alt = " add to destination";
+  //   addtodestBTN.onclick=removeFavCity();
+
+  // }
 };

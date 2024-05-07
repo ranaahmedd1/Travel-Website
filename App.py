@@ -29,9 +29,15 @@ def readJson():
     return data        
 
 
-def GetFavouriteCities(arr=[1,2]):
-    data=readJson()
+def getFavCities(FavFound):
+    allcities=readJson()
+    FavCitiesData=[]
+    for i in allcities['allcities']:
+        for e in FavFound:
+            if e== str(i['id']):
+                FavCitiesData.append(i)       
 
+    return   FavCitiesData        
 
 
 # CREATE DATABASE travel;
@@ -147,6 +153,11 @@ def showcity(idx):
         data=readJson()
         return  render_template("showcity.html",data=enumerate(data["allcities"]),cityidx=idx)
     render_template("login.html")
+
+
+
+
+
 @app.route("/addtoFav/<idx>")
 def addtoFav(idx):
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
@@ -154,8 +165,10 @@ def addtoFav(idx):
         user=session["user"]
         cursor.execute('SELECT `favouritecities` FROM traveller WHERE username = % s ', (user, ))
         cityArr = cursor.fetchone()
-        #append to favourite cities the new added favourite city
-        cityArr['favouritecities']+=','+idx                
+        if len(cityArr['favouritecities']) == 0:
+            cityArr['favouritecities']+=idx                
+        else:
+            cityArr['favouritecities']+=','+idx                
         cursor.execute('UPDATE `traveller` SET `favouritecities` =  % s   WHERE `username` = % s', ( cityArr['favouritecities'],user,))
         mysql.connection.commit()
         idx=int(idx)
@@ -167,21 +180,21 @@ def addtoFav(idx):
 
         
 
-@app.route("/destinations")
+@app.route("/destinations",methods=["GET", "POST"])
 def destinations():
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
     if "user" in session:
-        user=session["user"]
-        data=readJson()
-        cursor.execute('SELECT `favouritecities` FROM traveller WHERE username = % s ', (user, ))
-        FavFound = cursor.fetchone()['favouritecities'].split(",")   #FavFound string after split it's array of 
-        # print(type(FavFound))
-        # if FavFound != "":
-            # return render_template("destinations.html")
-                                #    ,,data=data['allcities'])
-        
-        return render_template("noFavFound.html",msg="destinations")
-    render_template("login.html")
+            cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+            user=session["user"]
+            cursor.execute('SELECT `favouritecities` FROM traveller WHERE username = % s ', (user, ))
+            FavFound = cursor.fetchone()['favouritecities']#.split(",") 
+            if len(FavFound) > 0:
+                data= getFavCities(FavFound) #data is a list of dict
+                return render_template("destinations.html", data=enumerate(data))
+            return render_template("noFavFound.html",msg="destinations")
+    else:
+        return render_template("login.html")
+
+
 
 
 @app.route("/visited")

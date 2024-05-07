@@ -19,6 +19,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: transparent;
+  /* position: fixed; */
 
 }
 .nav-items {

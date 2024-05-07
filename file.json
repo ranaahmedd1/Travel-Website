@@ -2,6 +2,19 @@
     "allcities": [
         {
             "attractions": [
+                "cairo tower,pyramida"
+            ],
+            "country": "Egypt",
+            "id": "0",
+            "images": [
+                "/static/images/11.jpg",
+                "/static/images/12.jpg",
+                "/static/images/13.jpg",
+                "/static/images/14.jpg"
+            ],
+            "name": "Cairo"
+        },{
+            "attractions": [
                 "Eiffel Tower",
                 "Louvre Museum",
                 "Notre-Dame Cathedral"
@@ -111,48 +124,7 @@
                 "https://images.pexels.com/photos/220887/pexels-photo-220887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             ],
             "name": "London"
-        },
-        {
-            "attractions": [
-                "cairo tower,pyramida"
-            ],
-            "country": "Egypt",
-            "id": "8",
-            "images": [
-                "/static/images/11.jpg",
-                "/static/images/12.jpg",
-                "/static/images/13.jpg",
-                "/static/images/14.jpg"
-            ],
-            "name": "Cairo"
-        },
-        {
-            "attractions": [
-                "ayahaga"
-            ],
-            "country": "ayhaga",
-            "id": 9,
-            "images": [
-                "/static/images/art3.jpg",
-                "/static/images/Cat.jpeg",
-                "/static/images/logo.png",
-                "/static/images/mount.jpg"
-            ],
-            "name": "ayhaga"
-        },
-        {
-            "attractions": [
-                "ayahaga"
-            ],
-            "country": "ayhaga",
-            "id": 10,
-            "images": [
-                "/static/images/imagee.jpeg",
-                "/static/images/logo.jpg",
-                "/static/images/R.jpg",
-                "/static/images/th.jpg"
-            ],
-            "name": "ayhaga"
         }
+      
     ]
 }
