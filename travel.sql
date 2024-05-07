@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2024 at 08:28 PM
+-- Generation Time: May 07, 2024 at 08:57 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -28,19 +28,21 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `traveller` (
-  `id` int(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(25) NOT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `favouritecities` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `traveller`
 --
 
-INSERT INTO `traveller` (`id`, `email`, `username`, `password`) VALUES
-(1, 'rana.ellese2015@gmail.com', 'ranaellese', '123'),
-(2, 'admin@admin.com', 'admin@admin.com', '123');
+INSERT INTO `traveller` (`id`, `username`, `email`, `password`, `favouritecities`) VALUES
+(1, 'admin@admin.com', 'admin@admin.com', '123', '1'),
+(2, 'ranaellese', 'rana.ellese2015@gmail.com', '123', ''),
+(3, 'ranahmed', 'RanaahmedEllaithy@gmail.com', '123', '');
 
 --
 -- Indexes for dumped tables
@@ -50,7 +52,7 @@ INSERT INTO `traveller` (`id`, `email`, `username`, `password`) VALUES
 -- Indexes for table `traveller`
 --
 ALTER TABLE `traveller`
-  ADD UNIQUE KEY `id` (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -60,7 +62,7 @@ ALTER TABLE `traveller`
 -- AUTO_INCREMENT for table `traveller`
 --
 ALTER TABLE `traveller`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
