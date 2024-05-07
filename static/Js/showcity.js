@@ -25,4 +25,22 @@ function switchFav(i) {
   //   addtodestBTN.onclick=removeFavCity();
 
   // }
+
+};
+
+function switchvisited(i) {
+  
+  if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/alreadyadded.png') {
+    addtodestIMG.src = '../static/images/add.png';
+    addtodestIMG.alt = "added to destination";
+    let i=localStorage.getItem("cityindex");
+    window.location.href = `http://127.0.0.1:5000/addtovisited/${i}`;
+  }
+  //  else if (addtodestIMG.src === 'http://127.0.0.1:5000/static/images/add.png') {
+  //   addtodestIMG.src = '../static/images/alreadyadded.png';
+  //   addtodestIMG.alt = " add to destination";
+  //   addtodestBTN.onclick=removeFavCity();
+
+  // }
+
 };

@@ -1,24 +1,24 @@
-.newParagraph{
-    text-align: center;
+.newParagraph {
+  text-align: center;
 }
 
 .img:hover {
-    opacity: 0.5;
-  }
+  opacity: 0.5;
+}
 
-#cityTable{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
-    min-height: 100vh; 
-  }
+#cityTable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
 
-#cityTable .city
-{
-cursor: pointer;
+#cityTable .city {
+  cursor: pointer;
+  transition: .5s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -33,35 +33,57 @@ cursor: pointer;
   background-color: #fff;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   text-align: center;
   padding-bottom: 24px;
   padding-top: 10px;
-  animation: citymove .25s ;
-
- 
 }
-#cityTable .city:hover
-
-{scale: 1.1;
+#cityTable .city:hover {
+  scale: 1.1;
 }
 
-@keyframes citymove {
-  0%   {height: 0px;color: white; width: 0px;}
-  
-  100% {height: 350px;color: #1c1e21;  ;width: 350px;}
-}
-#cityTable .city .image{
+#cityTable .city .image {
   width: 100px;
   height: 100px;
+  border-radius: 18px;
+
 }
 
+#cityTable :nth-of-type(3n + 1) {
+  animation: lefttoright 1s;
+  /* ease; */
+}
 
+@keyframes lefttoright {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#cityTable :nth-of-type(3n + 3) {
+  animation: righttoleft 1s;
+}
+
+@keyframes righttoleft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 
 .readMore {
-  background-color:#4d4e50;
-  border-radius: 8px;
+  transition: .5s;
+  background-color: #4d4e50;
+  border-radius: 18px;
   border-style: none;
   box-sizing: border-box;
   color: #ffffff;
@@ -84,10 +106,13 @@ cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  /* border-radius: 2%; */
 }
 
 /* adds shadow effect to button2 on hover*/
 .readMore:hover {
-  background-color:#4597e4 ;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   scale: 1.1;
 }
